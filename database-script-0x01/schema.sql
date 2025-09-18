@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS properties (
 
 CREATE TABLE IF NOT EXISTS bookings (
     booking_id CHAR(36) PRIMARY KEY,
-    property_id INT NOT NULL,
+    property_id CHAR(36) NOT NULL,
     user_id CHAR(36) NOT NULL,
     start_date DATE NOT NULL,
     end_date DATE NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS payments (
 
 CREATE TABLE IF NOT EXISTS reviews (
     review_id CHAR(36) PRIMARY KEY,
-    property_id INT NOT NULL,
+    property_id CHAR(36) NOT NULL,
     user_id CHAR(36) NOT NULL,
     rating INT NOT NULL CHECK (rating >= 1 AND rating <= 5),
     comment TEXT NOT NULL,
