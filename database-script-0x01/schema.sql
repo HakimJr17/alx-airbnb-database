@@ -21,8 +21,6 @@ CREATE TABLE IF NOT EXISTS properties (
     FOREIGN KEY (host_id) REFERENCES users(user_id)
 );
 
-
-
 CREATE TABLE IF NOT EXISTS bookings (
     booking_id CHAR(36) PRIMARY KEY,
     property_id CHAR(36) NOT NULL,
